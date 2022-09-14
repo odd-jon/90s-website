@@ -94,6 +94,7 @@ ul{
   width: 100%;
   height: 100%;
   position: fixed;
+  
   background-color: var(--black);
   overflow: hidden;
   
@@ -208,8 +209,9 @@ ul{
   }
 }
 
-.tour-header{
-  background-color: pink;
+.header-landing{
+  background-color: purple;
+  font-size: 2rem;
 }
 .content-main{
   display: flex;
@@ -222,7 +224,7 @@ ul{
   
 
 }
-.col {
+.col1, .col2, .col3 {
   display: flex;
   flex-direction: column;
   margin-bottom: 10%;
@@ -230,19 +232,106 @@ ul{
   transition-duration: 0.8s;
   background-color: #781b57;
   opacity: 0.8;
+  width: 80%;
+  text-align: center;
 }
 .ticket-but {
-  margin: 1rem;
+  margin: 1rem auto;
   padding: 0.5rem;
+  background-color: gold;
+  width: 60%;
+  text-align: center;
+  
   
 }
-.col:hover {
+.col2:hover {
   
   padding: 3rem;
-  background-image: url(media/arena.jpeg);
-  background-size: cover;
+  background-image: url(media/arena-mgmgarden-lasvegas.jpeg);
+  background-size: contain;
   color: white;
   opacity: 1;
+  width: 100%;
   
   
 }
+
+.container-news{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+}
+.news {
+  background-color: purple;
+  margin-top: 10%;
+  width: 90%;
+  opacity: 0.8;
+  transition: ease-in-out 0.8s;
+
+}
+.news:hover {
+  opacity: 1;
+  width: 100%;
+}
+.news h1 {
+  text-align: center;
+}
+.news img {
+  float: left;
+  width: 20%;
+  
+}
+.news p {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.container-merch{
+  display: flex;
+  background-color: azure;
+  width: 100%;
+  flex-direction: column;
+  
+  
+
+}
+.merch{
+  display: flex;
+  flex-flow: wrap;
+  width: 50%;
+  background-color: #781b57;
+  margin: 0 auto;
+  transition: ease-in-out 0.8s;
+  
+  
+}
+.title {
+  width: 100%;
+  text-align: left;
+  
+}
+.merch img{
+  
+  width: 50%;
+}
+.info {
+  width: 50%;
+  display: none;
+  text-align: center;
+  font-size: 1.5rem;
+  
+  
+}
+.merch:hover .info {
+  display: block;
+  
+  
+}
+.merch:hover{
+  width: 100%;
+}
+
+
+
