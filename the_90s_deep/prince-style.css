@@ -1,0 +1,248 @@
+@font-face {
+  font-family: still-time;
+  src: url(still-time.ttf);
+}
+
+:root{
+    --white: #f9f9f9;
+    --black: purple;
+    --gray: #781b57;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    
+    font-size: 16px;
+    background: url(media/purple-flames.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.content-gallery {
+  display: flex;
+  flex-flow: column wrap;
+  
+  height: 580px;
+}
+
+.content-gallery img {
+  width: 32%;
+  
+  margin: 2% 2%;
+  transition: ease-in-out 0.8s;
+}
+
+/* Re-order items into rows */
+.content img:nth-child(3n+1) { order: 1; }
+.content img:nth-child(3n+2) { order: 2; }
+.content img:nth-child(3n)   { order: 3; }
+
+/* Force new columns */
+.content-gallery::before,
+.content-gallery::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
+.content-gallery img:hover {
+  width: 50%;
+  
+
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+
+
+/* Header */
+.header{
+  background-color: var(--black);
+  box-shadow: 1px 1px 5px 0px var(--gray);
+  
+  position: sticky;
+  top: 0;
+  width: 100%;
+  font-family: still-time;
+  z-index: 1;
+}
+/* Logo */
+.logo{
+  
+  color: var(--white);
+  font-size: 2rem;
+  margin-left: 1rem;
+  
+}
+
+
+/* Nav menu */
+.nav{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--black);
+  overflow: hidden;
+  
+  
+}
+.menu a{
+  display: block;
+  padding: 3rem;
+  color: var(--white);
+  font-size: 2rem;
+  opacity: 0.8;
+  
+}
+.menu a:hover{
+  background-color: var(--gray);
+  opacity: 0.8;
+  
+  
+}
+.nav{
+  max-height: 0;
+  transition: max-height .5s ease-out;
+  
+  
+}
+
+
+
+/* Menu Icon */
+.hamb{
+  cursor: pointer;
+  float: right;
+  padding: 20px 20px;
+}/* Style label tag */
+
+.hamb-line {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+  background: var(--white);
+  content: ' ';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.hamb-line::before{
+  top: 5px;
+}
+.hamb-line::after{
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+  max-height: 100%;
+  opacity: 1;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+
+
+/* Responsiveness */
+@media (min-width: 768px) {
+  .nav{
+      max-height: 0;
+      top: 0;
+      position: relative;
+      float: right;
+      width: fit-content;
+      opacity: 1;
+  }
+  .menu li{
+      float: left;
+      
+  }
+  .menu a:hover{
+      background-color: transparent;
+      color: var(--gray);
+
+  }
+
+  .hamb{
+      display: none;
+  }
+
+  .content-gallery{
+    flex-direction: row;
+    width: 80%;
+  }
+}
+
+.tour-header{
+  background-color: pink;
+}
+.content-main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  
+  align-items: center;
+  
+  
+
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+  font-size: 2rem;
+  transition-duration: 0.8s;
+  background-color: #781b57;
+  opacity: 0.8;
+}
+.ticket-but {
+  margin: 1rem;
+  padding: 0.5rem;
+  
+}
+.col:hover {
+  
+  padding: 3rem;
+  background-image: url(media/arena.jpeg);
+  background-size: cover;
+  color: white;
+  opacity: 1;
+  
+  
+}
