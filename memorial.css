@@ -1,7 +1,11 @@
 /* Theming */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
 
-
+@font-face {
+  font-family: windows-98;
+  src: url(windows-98.ttf);
+  
+}
 
 :root{
     --white: #f9f9f9;
@@ -147,16 +151,9 @@ ul{
     margin: auto;
   }
 }
-/* Can't get to work
-.popup {
-  display: none;
-}
 
-#popup-enable:checked ~ .popup{
-  display: block;
-  
-} 
-*/
+
+
 
 .comment-box, .post {
   border: none;
@@ -168,6 +165,8 @@ ul{
   background-color: purple;
   color: white;
 }
+
+
 
 
 .cond-container {
@@ -195,26 +194,32 @@ opacity: 1;
 
 width: 100%;
 
-
 }
+
 
 .popup{
   width: 80%;
-  
+  font-family: windows-98;
   background-color: #cecece;
   display: flex;
   flex-direction: column;
   margin: auto;
  
   max-width: 400px;
+  border-style: outset;
+  border-width: 0.2rem;
+  border-color: darkgray;
+  
 }
 
 .button-yes{
   padding: 0.5rem;
   margin: 1rem 2rem;
-  border-color: black;
-  border-width: 1px;
+ 
   width: 40%;
+  font-family: windows-98;
+  border-style: outset;
+  border-width: 0.2rem;
   
   
 }
@@ -226,4 +231,5 @@ width: 100%;
   margin-top: 0;
   color: white;
   background-color: blue;
+  font-family: windows-98;
 }

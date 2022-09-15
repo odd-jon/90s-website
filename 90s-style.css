@@ -3,13 +3,29 @@
   src: url(still-time.ttf);
 }
 
+@font-face {
+  font-family: LcdSolid-VPzB;
+  src: url(LcdSolid-VPzB.ttf);
+}
+
 :root{
     --white: #f9f9f9;
     --black: purple;
     --gray: #781b57;
+    --black-purple: #180327;
+    --dark-purple: #30154b;
+    --mid-purple:	#834bd0;
+    --light-purple: #bb79f0;
+    --white-purple:	#e5c6f0;
+    --gold: conic-gradient(#edc800, #e3b600, #f3cf00, #ffe800,
+    #edc800, #e3b600, #f3cf00, #ffe800,
+    #edc800, #e3b600, #f3cf00, #ffe800,
+    #edc800, #e3b600, #f3cf00, #ffe800);
+
+
+
 } /* variables*/
 
-/* Reset */
 *{
     margin: 0;
     padding: 0;
@@ -17,7 +33,7 @@
 }
 body{
     
-    
+    font-family: LcdSolid-VPzB;
     font-size: 16px;
     background: url(media/purple-flames.gif);
     background-position: center;
@@ -70,13 +86,13 @@ ul{
 
 /* Header */
 .header{
-  background-color: var(--black);
+  background-color: var(--mid-purple);
   box-shadow: 1px 1px 5px 0px var(--gray);
   
   position: sticky;
   top: 0;
   width: 100%;
-  font-family: still-time;
+  font-family: LcdSolid-VPzB;
   z-index: 1;
 }
 /* Logo */
@@ -89,36 +105,38 @@ ul{
 }
 
 
-/* Nav menu */
+/* Nav menu  CHANGED FIXED TO RELATIVE */
 .nav{
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: relative;
   
-  background-color: var(--black);
+  background-color: var(--mid-purple);
   overflow: hidden;
   
   
+  
 }
-.menu a{
+.menu a{   
   display: block;
   padding: 3rem;
-  color: var(--white);
+  color: var(--black-purple);
   font-size: 2rem;
   opacity: 0.8;
   
 }
 .menu a:hover{
-  background-color: var(--gray);
+  background-color: var(--white-purple);
   opacity: 0.8;
   
   
 }
 .nav{
   max-height: 0;
-  transition: max-height .5s ease-out;
+  transition: max-height .5s ease-in-out;
   
   
+
 }
 
 
@@ -180,7 +198,7 @@ ul{
 
 
 /* Responsiveness */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .nav{
       max-height: none;
       top: 0;
@@ -193,6 +211,15 @@ ul{
       float: left;
       
   }
+  .menu a{   
+    display: block;
+    padding: 0rem;
+    color: var(--black-purple);
+    font-size: 2rem;
+    opacity: 0.8;
+    
+  }
+
   .menu a:hover{
       background-color: transparent;
       color: var(--gray);
@@ -207,11 +234,74 @@ ul{
     flex-direction: row;
     width: 80%;
   }
+  .col {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+    font-size: 1rem;
+    transition-duration: 0.8s;
+    background-color: var(--white-purple);
+    border-width: 0.4rem;
+    border-style: outset;
+    border-color: var(--black-purple);
+    width: 80%;
+    text-align: center;
+    color: var(--white-purple);
+    
+  }
+  .content-main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    
+    
+    align-items: center;
+    
+    
+  
+  }
+  .ticket-but {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background-color: gold;
+    width: 20%;
+    text-align: center;
+    
+  }
+  .container-news{
+    
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+  
+  }
+  .news {
+    background-color: var(--dark-purple);
+    margin-top: 10%;
+    width: 90%;
+   
+    transition: ease-in-out 0.8s;
+  
+  }
+
+  .container-merch{
+    display: flex;
+    
+    width: 60%;
+    flex-direction: row;
+    
+    
+  
+  }
+  
 }
 
 .header-landing{
-  background-color: purple;
+  background-color: var(--mid-purple);
   font-size: 2rem;
+  margin: 1rem  auto;
+  text-align: center;
+  padding: 0.4rem;
 }
 .content-main{
   display: flex;
@@ -224,16 +314,20 @@ ul{
   
 
 }
-.col1, .col2, .col3 {
+.col {
   display: flex;
   flex-direction: column;
   margin-bottom: 10%;
-  font-size: 2rem;
+  font-size: 1rem;
   transition-duration: 0.8s;
-  background-color: #781b57;
-  opacity: 0.8;
+  background-color: var(--dark-purple);
+  border-width: 0.4rem;
+  border-style: outset;
+  border-color: var(--black-purple);
   width: 80%;
   text-align: center;
+  color: var(--white-purple);
+  
 }
 .ticket-but {
   margin: 1rem auto;
@@ -241,14 +335,18 @@ ul{
   background-color: gold;
   width: 60%;
   text-align: center;
-  
+  border-width: 0.2rem;
+  border-style: outset;
+  border-color: darkgoldenrod;
+  font-family: LcdSolid-VPzB;
+  max-width: 10rem;
   
 }
-.col2:hover {
+.col:hover {
   
   padding: 3rem;
-  background-image: url(media/arena-mgmgarden-lasvegas.jpeg);
-  background-size: contain;
+  background-image: url(media/background-pixel.jpg);
+  background-size: cover;
   color: white;
   opacity: 1;
   width: 100%;
@@ -264,15 +362,18 @@ ul{
 
 }
 .news {
-  background-color: purple;
+  background-color: var(--dark-purple);
   margin-top: 10%;
   width: 90%;
-  opacity: 0.8;
+  color: var(--white-purple);
   transition: ease-in-out 0.8s;
+  border-width: 0.4rem;
+  border-style: outset;
+  border-color: var(--black-purple);
 
 }
 .news:hover {
-  opacity: 1;
+  
   width: 100%;
 }
 .news h1 {
@@ -290,7 +391,7 @@ ul{
 
 .container-merch{
   display: flex;
-  background-color: azure;
+  
   width: 100%;
   flex-direction: column;
   
@@ -301,37 +402,58 @@ ul{
   display: flex;
   flex-flow: wrap;
   width: 50%;
-  background-color: #781b57;
-  margin: 0 auto;
-  transition: ease-in-out 0.8s;
+  background-color: var(--dark-purple);
+  margin: 1rem auto;
+  
+  border-width: 0.4rem;
+  border-style: outset;
+  border-color: var(--black-purple);
+  max-width: 200px;
   
   
 }
 .title {
   width: 100%;
-  text-align: left;
+  text-align: center;
+  color: var(--white-purple);
+  margin: 1rem;
   
 }
 .merch img{
-  
-  width: 50%;
+  height: 180px;
+  width: 180px;
+align-content: flex-start;
+padding-bottom: 1rem;
+
 }
 .info {
   width: 50%;
   display: none;
-  text-align: center;
-  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 0.5rem;
   
+  font-size: 1.5rem;
+  color: var(--white-purple);
+  font-size: 1rem;
+  margin: auto auto;
   
 }
 .merch:hover .info {
   display: block;
   
   
+  
 }
 .merch:hover{
+  max-width: 400px;
+  
   width: 100%;
 }
 
-
-
+.footer {
+  background-color: var(--mid-purple);
+  font-size: 1rem;
+  margin: 1rem  auto 0;
+  text-align: center;
+  padding: 0.4rem;
+}
