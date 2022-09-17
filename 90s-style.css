@@ -34,7 +34,7 @@ body{
     font-family: LcdSolid-VPzB;
     font-size: 16px;
     background: url(media/purple-flames.gif);
-    background-position: center;
+
     background-size: cover;
 }
 
@@ -196,104 +196,6 @@ ul{
 
 
 
-/* Responsiveness */
-@media screen and (min-width: 768px) {
-  .nav{
-      max-height: none;
-      top: 0;
-      position: relative;
-      float: right;
-      width: fit-content;
-      opacity: 1;
-  }
-  .menu li{
-      float: left;
-      
-  }
-  .menu a{   
-    display: block;
-    padding: 0rem;
-    color: var(--black-purple);
-    font-size: 2rem;
-    opacity: 0.8;
-    
-  }
-
-  .menu a:hover{
-      background-color: transparent;
-      color: var(--gray);
-
-  }
-
-  .hamb{
-      display: none;
-  }
-
-  .content-gallery{
-    flex-direction: row;
-    width: 80%;
-  }
-  .col {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10%;
-    font-size: 1rem;
-    transition-duration: 0.8s;
-    background-color: var(--white-purple);
-    border-width: 0.4rem;
-    border-style: outset;
-    border-color: var(--black-purple);
-    width: 80%;
-    text-align: center;
-    color: var(--white-purple);
-    
-  }
-  .content-main{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    
-    
-    align-items: center;
-    
-    
-  
-  }
-  .ticket-but {
-    margin: 1rem auto;
-    padding: 0.5rem;
-    background-color: gold;
-    width: 20%;
-    text-align: center;
-    
-  }
-  .container-news{
-    
-    flex-direction: row;
-    width: 50%;
-    align-items: center;
-  
-  }
-  .news {
-    background-color: var(--dark-purple);
-    margin-top: 10%;
-    width: 90%;
-   
-    transition: ease-in-out 0.8s;
-  
-  }
-
-  .container-merch{
-    display: flex;
-    
-    width: 60%;
-    flex-direction: row;
-    
-    
-  
-  }
-  
-}
 
 .header-landing{
   background-color: var(--mid-purple);
@@ -457,3 +359,88 @@ padding-bottom: 1rem;
   padding: 0.4rem;
 }
 
+
+/* Responsiveness */
+@media screen and (min-width: 768px) {
+  .nav{
+      max-height: none;
+      top: 0;
+      position: relative;
+      float: right;
+      width: fit-content;
+      opacity: 1;
+  }
+  .menu li{
+      float: left;
+      
+  }
+  .menu a{   
+    display: block;
+    padding: 0rem;
+    color: var(--black-purple);
+    font-size: 2rem;
+    opacity: 0.8;
+    
+  }
+
+  .menu a:hover{
+      background-color: transparent;
+      color: var(--gray);
+
+  }
+
+  .hamb{
+      display: none;
+  }
+
+  .content-gallery{
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-evenly
+  }
+  .col {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+    justify-content: center;
+ 
+    transition-duration: 0.8s;
+  
+    width: 80%;
+   
+    color: var(--white-purple);
+    
+  }
+  .content-main{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+  }
+  .ticket-but {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background-color: gold;
+    width: 20%;
+    text-align: center;
+  }
+  .container-news{
+    flex-direction: row;
+    width: 70%;
+    align-items: center;
+  }
+  .news {
+    flex-direction: row-reverse;
+    background-color: var(--dark-purple);
+    margin-top: 10%;
+    width: 50%;
+    transition: ease-in-out 0.8s;
+    
+  }
+
+  .container-merch{
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+  }
+}
